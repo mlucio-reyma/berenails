@@ -1,0 +1,14 @@
+name                  = "berenails"
+compatibility_date    = "2024-01-01"
+pages_build_output_dir = "dist"
+
+[vars]
+APP_ENV  = "production"
+APP_NAME = "BereNails Studio"
+
+[env.preview]
+name = "berenails-preview"
+
+[env.preview.vars]
+APP_ENV  = "preview"
+APP_NAME = "BereNails Studio (Preview)"

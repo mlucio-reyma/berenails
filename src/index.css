@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-cream:     #f9f3ec;
+    --color-rose-gold: #c9a48a;
+    --color-blush:     #f0d9cd;
+    --color-espresso:  #3d2314;
+    --color-mink:      #8c6b55;
+  }
+
+  html {
+    @apply scroll-smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-cream-100 font-body text-espresso;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background-color: var(--color-blush);
+    color: var(--color-espresso);
+  }
+
+  ::-webkit-scrollbar       { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--color-cream); }
+  ::-webkit-scrollbar-thumb { background: var(--color-blush); border-radius: 99px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-rose-gold); }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-rose-gold text-cream-100 font-body font-medium
+           px-8 py-3.5 rounded-full
+           transition-all duration-300
+           hover:bg-rose-gold-dark hover:shadow-luxury
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:ring-offset-2
+           active:scale-[0.98];
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2
+           border border-rose-gold text-rose-gold font-body font-medium
+           px-8 py-3.5 rounded-full
+           transition-all duration-300
+           hover:bg-rose-gold hover:text-cream-100
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:ring-offset-2
+           active:scale-[0.98];
+  }
+
+  .card {
+    @apply bg-white rounded-4xl p-6 shadow-luxury
+           transition-shadow duration-300 hover:shadow-luxury-lg;
+  }
+
+  .input {
+    @apply w-full rounded-2xl border border-cream-300 bg-cream-50
+           px-4 py-3 font-body text-espresso placeholder:text-mink
+           transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-rose-gold/40 focus:border-rose-gold
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .label {
+    @apply block font-body text-sm font-medium text-mink mb-1.5;
+  }
+
+  .section {
+    @apply px-4 py-16 sm:px-6 sm:py-24 lg:px-8;
+  }
+
+  .container-luxury {
+    @apply mx-auto max-w-6xl;
+  }
+
+  .divider-gold {
+    @apply h-px bg-gradient-to-r from-transparent via-rose-gold/40 to-transparent;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+
+  .gradient-brand {
+    background: linear-gradient(135deg, #f0d9cd 0%, #f9f3ec 100%);
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #c9a48a 0%, #dbbfa8 50%, #b08e72 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass {
+    background: rgba(249, 243, 236, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}

@@ -1,0 +1,31 @@
+# Dependencias
+node_modules/
+
+# Build
+dist/
+dist-ssr/
+
+# Variables de entorno — NUNCA en el repo
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / OS
+.DS_Store
+.vscode/settings.json
+.idea/
+*.suo
+*.sw?
+
+# Testing
+coverage/
+
+# Cloudflare / Wrangler
+.wrangler/
+
+# TypeScript
+*.tsbuildinfo
