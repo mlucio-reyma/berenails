@@ -4,11 +4,11 @@
 
 @layer base {
   :root {
-    --color-cream:     #f9f3ec;
+    --color-cream: #f9f3ec;
     --color-rose-gold: #c9a48a;
-    --color-blush:     #f0d9cd;
-    --color-espresso:  #3d2314;
-    --color-mink:      #8c6b55;
+    --color-blush: #f0d9cd;
+    --color-espresso: #3d2314;
+    --color-mink: #8c6b55;
   }
 
   html {
@@ -21,7 +21,12 @@
     @apply bg-cream-100 font-body text-espresso;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-display;
   }
 
@@ -30,10 +35,19 @@
     color: var(--color-espresso);
   }
 
-  ::-webkit-scrollbar       { width: 6px; }
-  ::-webkit-scrollbar-track { background: var(--color-cream); }
-  ::-webkit-scrollbar-thumb { background: var(--color-blush); border-radius: 99px; }
-  ::-webkit-scrollbar-thumb:hover { background: var(--color-rose-gold); }
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-cream);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-blush);
+    border-radius: 99px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-rose-gold);
+  }
 }
 
 @layer components {
@@ -88,7 +102,9 @@
 }
 
 @layer utilities {
-  .text-balance { text-wrap: balance; }
+  .text-balance {
+    text-wrap: balance;
+  }
 
   .gradient-brand {
     background: linear-gradient(135deg, #f0d9cd 0%, #f9f3ec 100%);

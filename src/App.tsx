@@ -14,5 +14,5 @@ export default function App() {
         <div className="mt-8 divider-gold w-32 mx-auto" />
       </div>
     </div>
-  )
+  );
 }
